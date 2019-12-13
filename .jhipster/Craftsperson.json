@@ -1,0 +1,42 @@
+{
+    "name": "Craftsperson",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "craftsperson",
+            "otherEntityRelationshipName": "mentor",
+            "relationshipName": "mentees"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "craftsperson",
+            "otherEntityRelationshipName": "mentees",
+            "relationshipName": "mentor",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191213171525",
+    "entityTableName": "craftsperson",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
