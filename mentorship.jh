@@ -1,0 +1,13 @@
+entity Craftsperson {
+	firstName String,
+    lastName String,
+	email String
+}
+
+relationship OneToMany {
+	Craftsperson{mentees} to Craftsperson{mentor}
+}
+
+paginate Craftsperson with infinite-scroll
+
+service Craftsperson with serviceImpl
